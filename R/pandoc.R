@@ -79,7 +79,7 @@ pandoc_convert <- function(input,
   args <- c(args, options)
 
   # set pandoc stack size
-  stack_size <- getOption("pandoc.stack.size", default = "512m")
+  stack_size <- getOption("pandoc.stack.size", default = "5G")
   args <- c(c("+RTS", paste0("-K", stack_size), "-RTS"), args)
 
   # build the conversion command
